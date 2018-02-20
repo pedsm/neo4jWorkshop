@@ -1,0 +1,16 @@
+version: '3'
+services:
+  neo4j:
+      image: neo4j:3.0
+      ports:
+       - "7474:7474"
+       - "7687:7687"
+      volumes:
+       - ./data:/var/lib/neo4j/import #Mount the data folder to imports
+      environment:
+       - NEO4J_HEAP_MEMORY=8192 # configure the heap memory
+      ulimits:
+          nproc: 40000
+          nofile:
+              soft: 40000
+              hard: 40000
