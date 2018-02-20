@@ -3,7 +3,7 @@ CREATE INDEX ON :COMPANY(id);
 
 // Load (c:COMPANY)
 USING PERIODIC COMMIT 10000
-LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/pedsm/neo4jWorkshop/master/generatedData/companies.csv" AS row
+LOAD CSV WITH HEADERS FROM "file:///companies.csv" AS row
 WITH row 
 MERGE (c:COMPANY {
     id: row.id,
@@ -13,7 +13,7 @@ MERGE (c:COMPANY {
 
 // Load (p:PERSON) and Companies
 USING PERIODIC COMMIT 50000
-LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/pedsm/neo4jWorkshop/master/generatedData/people.csv" AS person 
+LOAD CSV WITH HEADERS FROM "file:///people.csv" AS person 
 WITH person 
 MATCH (c:COMPANY {id:person.company})
 MERGE (p:PERSON {
@@ -25,7 +25,7 @@ MERGE (p:PERSON {
 })-[:WORKS_AT]->(c);
 
 USING PERIODIC COMMIT 50000
-LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/pedsm/neo4jWorkshop/master/generatedData/friendships.csv" AS friendship 
+LOAD CSV WITH HEADERS FROM "file:///friendships.csv" AS friendship 
 WITH friendship 
 MATCH (a:PERSON {id:friendship.aId})
 MATCH (b:PERSON {id:friendship.bId})

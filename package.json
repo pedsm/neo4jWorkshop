@@ -1,0 +1,25 @@
+{
+  "name": "neo4jworkshop",
+  "version": "1.0.0",
+  "description": "Helper files and scripts for the neo4j workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node src/generate.js",
+    "populate": "node src/populateNeo4j.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedsm/neo4jWorkshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedsm/neo4jWorkshop/issues"
+  },
+  "homepage": "https://github.com/pedsm/neo4jWorkshop#readme",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "json-2-csv": "^2.1.2"
+  }
+}
