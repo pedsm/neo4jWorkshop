@@ -16,4 +16,4 @@ docker-compose up
 
 1. Basics `demo_basics.cql`
 2. TFL `demo_tfl.cql`
-2. TFL `demo_social.cql`
+3. Social `demo_social.cql`
