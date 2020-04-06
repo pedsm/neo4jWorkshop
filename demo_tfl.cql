@@ -27,6 +27,7 @@ MATCH (n:Station)--(n1) RETURN n.name as station, count(distinct(n1)) as connect
 // Find stations 1 hop away from Baker Street
 MATCH (s:Station {name: "Baker Street"})-[*..1]-(s2) RETURN s,s2
 
+// Anything below this line will only work if you have the Graph algorithms plugin
 // Find the most distance station to Baker Street by taking the shortest time to each
 MATCH (n:Station {name:'Baker Street'})
 CALL algo.shortestPaths.stream(n, 'time')

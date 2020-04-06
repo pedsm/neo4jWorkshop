@@ -9,11 +9,11 @@ Helper files and scripts for the neo4j workshop
 docker-compose up
 ```
 
+## Examples
+
+- Cypher basics `demo_basics.cql`
+- Simple follow-based social network model `follow.cypher`
+- Import the TFL map as a Graph `demo_tfl.cql`
+
 ## Slide deck
-> [https://slides.com/pedrosantosmendonca/deck/live](https://slides.com/pedrosantosmendonca/deck/live)
-
-### Demos
-
-1. Basics `demo_basics.cql`
-2. TFL `demo_tfl.cql`
-3. Social `demo_social.cql`
+> [https://slides.com/pedrosantosmendonca/intro-to-graphs#/](https://slides.com/pedrosantosmendonca/intro-to-graphs#/)
